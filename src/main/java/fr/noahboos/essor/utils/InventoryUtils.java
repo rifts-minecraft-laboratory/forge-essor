@@ -51,6 +51,7 @@ public class InventoryUtils {
 
                 EquipmentLevelingData data = itemStack.getComponents().get(ModDataComponentTypes.DC_EQUIPMENT_LEVELING_DATA);
                 data.SetPrestigeExperienceMultiplier((float) Math.round((data.GetPrestige() * 0.25f) * 100f) / 100f);
+                data.SetChallengeExperienceMultiplier(0.00f);
                 for (Challenge challenge : data.GetChallenges().challenges) {
                     float challengeExperienceMultiplier = (float) Math.round((challenge.currentTier * 0.25f) * 100f) / 100f;
                     data.SetChallengeExperienceMultiplier(data.GetChallengeExperienceMultiplier() + challengeExperienceMultiplier);
@@ -74,6 +75,7 @@ public class InventoryUtils {
 
                 EquipmentLevelingData data = itemStack.getComponents().get(ModDataComponentTypes.DC_EQUIPMENT_LEVELING_DATA);
                 data.SetPrestigeExperienceMultiplier((float) Math.round((data.GetPrestige() * 0.25f) * 100f) / 100f);
+                data.SetChallengeExperienceMultiplier(0.00f);
                 for (Challenge challenge : data.GetChallenges().challenges) {
                     float challengeExperienceMultiplier = (float) Math.round((challenge.currentTier * 0.25f) * 100f) / 100f;
                     data.SetChallengeExperienceMultiplier(data.GetChallengeExperienceMultiplier() + challengeExperienceMultiplier);
