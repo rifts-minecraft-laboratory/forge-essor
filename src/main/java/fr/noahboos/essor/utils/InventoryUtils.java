@@ -62,7 +62,9 @@ public class InventoryUtils {
 
         for (ItemStack itemStack : inventory.armor) {
             if (UPGRADABLE_ITEM_CLASSES.contains(itemStack.getItem().getClass())) {
-                itemStack.set(ModDataComponentTypes.DC_EQUIPMENT_LEVELING_DATA, new EquipmentLevelingData());
+                if (!itemStack.getComponents().has(ModDataComponentTypes.DC_EQUIPMENT_LEVELING_DATA)) { 
+                    itemStack.set(ModDataComponentTypes.DC_EQUIPMENT_LEVELING_DATA, new EquipmentLevelingData());
+                }
             }
         }
 
